@@ -8,5 +8,6 @@
   "permissions": [
     "selection",
     "design_tokens"
-  ]
+  ],
+  "description": "Generates HTML using Bootstrap classes and integrates Penpot Design Tokens."
 }
