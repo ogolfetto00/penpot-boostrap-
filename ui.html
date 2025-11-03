@@ -22,18 +22,29 @@
     <textarea id="output-code" readonly placeholder="Generated HTML will appear here..."></textarea>
 
     <script>
+        // Notify host that UI is ready
+        window.addEventListener('DOMContentLoaded', () => {
+            try {
+                parent.postMessage({ pluginMessage: { type: 'ready' } }, '*');
+            } catch (e) {
+                // ignore
+            }
+        });
+
         // Send a message to the main plugin code.js when the button is clicked
         document.getElementById('generate-btn').onclick = () => {
             parent.postMessage({ pluginMessage: { type: 'generate-code' } }, '*');
         };
 
         // Listen for messages from code.js (the generated code)
-        window.onmessage = (event) => {
-            const { type, code } = event.data.pluginMessage;
-            if (type === 'code-output') {
+        window.addEventListener('message', (event) => {
+            const payload = event.data && (event.data.pluginMessage || event.data);
+            if (!payload) return;
+            const { type, code } = payload;
+            if (type === 'code-output' || type === 'code') {
                 document.getElementById('output-code').value = code;
             }
-        };
+        });
     </script>
 </body>
 </html>
