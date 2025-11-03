@@ -1,9 +1,10 @@
 {
   "name": "Boostrap html",
   "description": "Generate HTML from selected element",
-  "code": "/penpot-boostrap-/code.js",
+  "code": "https://raw.githubusercontent.com/ogolfetto00/penpot-boostrap-/refs/heads/main/code.js",
   "icon": "/penpot-plugins/tailwind-html/icon.png",
   "permissions": ["content:read"]
 }
+
 
 
