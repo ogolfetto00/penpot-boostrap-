@@ -80,3 +80,43 @@ ${elementHtml}
         penpot.ui.postMessage({ type: 'code-output', code: finalCode });
     }
 });
+
+// Register the UI
+penpot.registerUI({
+    html: `<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: sans-serif; padding: 10px; }
+        textarea { width: 100%; height: 200px; margin-top: 10px; resize: none; }
+        button { 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 8px 15px; 
+            border-radius: 4px; 
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>Bootstrap HTML Generator</h3>
+    <p>Select a Frame or Element and click 'Generate'.</p>
+    <button id="generate-btn">Generate Bootstrap Code</button>
+    <textarea id="output-code" readonly placeholder="Generated HTML will appear here..."></textarea>
+
+    <script>
+        document.getElementById('generate-btn').onclick = () => {
+            penpot.postMessage({ type: 'generate-code' });
+        };
+
+        penpot.on('message', (msg) => {
+            if (msg.type === 'code-output') {
+                document.getElementById('output-code').value = msg.code;
+            }
+        });
+    </script>
+</body>
+</html>`
+});
