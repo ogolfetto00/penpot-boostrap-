@@ -1,10 +1,14 @@
 {
-  "name": "Boostrap html",
-  "description": "Generate HTML from selected element",
-  "code": "https://raw.githubusercontent.com/ogolfetto00/penpot-boostrap-/refs/heads/main/code.js",
-  "icon": "/penpot-plugins/tailwind-html/icon.png",
-  "permissions": ["content:read"]
+  "penpotExtension": true,
+  "id": "com.ogolfetto.bootstrap-html",
+  "name": "Bootstrap HTML Generator",
+  "author": "ogolfetto00",
+  "version": "1.0.0",
+  "description": "Generate HTML from selected element using Bootstrap classes",
+  "entry": "code.js",
+  "ui": "ui.html",
+  "icon": "icon.png",
+  "categories": ["generator", "export"]
 }
-
 
 
