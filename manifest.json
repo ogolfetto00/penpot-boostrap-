@@ -1,11 +1,15 @@
 {
   "penpotExtension": true,
-  "id": "com.example.bootstrap-html-generator",
-  "name": "Bootstrap HTML Generator (Prototype)",
+  
+  "name": "penpot-boostrap",
+  "description": "Collezione di componenti Bootstrap per Penpot.",
+  "code": "code.js",  
+  "permissions": [
+    "content:read", 
+    "content:write"
+  ]
   "author": "ogolfetto00",
   "version": "1.0.0",
-  "description": "Generates HTML using Bootstrap classes and integrates Penpot Design Tokens.",
-  "entry": "code.js",
-  "icon": "icon.png",
   "categories": ["generator", "export"]
 }
+
