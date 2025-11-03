@@ -236,7 +236,7 @@ function shapeToHTML(shape) {
 // --- Messaging / UI interaction --------------------------------------------
 penpot.ui.open(
 		"Bootstrap generator",
-		"/penpot-plugins/bootstrap-html-generator/ui.html",
+		"/penpot-plugins/penpot-boostrap-/ui.html?theme=" + encodeURIComponent(penpot.theme || ""),
 		{ width: 360, height: 420 }
 );
 
