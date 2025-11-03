@@ -1,13 +1,11 @@
 {
-  "name": "Bootstrap HTML Generator (Prototype)",
+  "penpotExtension": true,
   "id": "com.example.bootstrap-html-generator",
+  "name": "Bootstrap HTML Generator (Prototype)",
+  "author": "ogolfetto00",
   "version": "1.0.0",
-  "main": "code.js",
-  "ui": "ui.html",
-  "api_version": "1.0.0",
-  "permissions": [
-    "selection",
-    "design_tokens"
-  ],
-  "description": "Generates HTML using Bootstrap classes and integrates Penpot Design Tokens."
+  "description": "Generates HTML using Bootstrap classes and integrates Penpot Design Tokens.",
+  "entry": "code.js",
+  "icon": "icon.png",
+  "categories": ["generator", "export"]
 }
