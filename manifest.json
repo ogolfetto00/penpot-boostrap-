@@ -1,0 +1,12 @@
+{
+  "name": "Bootstrap HTML Generator (Prototype)",
+  "id": "com.example.bootstrap-html-generator",
+  "version": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "api_version": "1.0.0",
+  "permissions": [
+    "selection",
+    "design_tokens"
+  ]
+}

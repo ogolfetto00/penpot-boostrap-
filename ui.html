@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: sans-serif; padding: 10px; }
+        textarea { width: 100%; height: 200px; margin-top: 10px; resize: none; }
+        button { 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 8px 15px; 
+            border-radius: 4px; 
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>Bootstrap HTML Generator</h3>
+    <p>Select a Frame or Element and click 'Generate'.</p>
+    <button id="generate-btn">Generate Bootstrap Code</button>
+    <textarea id="output-code" readonly placeholder="Generated HTML will appear here..."></textarea>
+
+    <script>
+        // Send a message to the main plugin code.js when the button is clicked
+        document.getElementById('generate-btn').onclick = () => {
+            parent.postMessage({ pluginMessage: { type: 'generate-code' } }, '*');
+        };
+
+        // Listen for messages from code.js (the generated code)
+        window.onmessage = (event) => {
+            const { type, code } = event.data.pluginMessage;
+            if (type === 'code-output') {
+                document.getElementById('output-code').value = code;
+            }
+        };
+    </script>
+</body>
+</html>
