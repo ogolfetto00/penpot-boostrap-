@@ -1,15 +1,8 @@
 {
-  "penpotExtension": true,
-  
-  "name": "penpot-boostrap",
-  "description": "Collezione di componenti Bootstrap per Penpot.",
-  "code": "code.js",  
-  "permissions": [
-    "content:read", 
-    "content:write"
-  ]
-  "author": "ogolfetto00",
-  "version": "1.0.0",
-  "categories": ["generator", "export"]
+  "name": "Boostrap html",
+  "description": "Generate HTML from selected element",
+  "code": "code.js",
+  "icon": "/penpot-plugins/tailwind-html/icon.png",
+  "permissions": ["content:read"]
 }
 
